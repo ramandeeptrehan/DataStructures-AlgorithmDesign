@@ -19,11 +19,16 @@ public class TreeTest {
 		
 		assertNotNull(tree.getRoot());
 		assertEquals(2, tree.getRoot().getValue());
-		assertEquals(1, tree.getHeightOfTree());
+		assertEquals(1, tree.getHeightOfTreeRecursive());
+		assertEquals(1, tree.getHeightOfTreeDFS());
+		assertEquals(1, tree.getHeightOfTreeBFS());
+
 		
 		tree.addNode(4);
 		tree.addNode(1);
-		assertEquals(2, tree.getHeightOfTree());
+		assertEquals(2, tree.getHeightOfTreeRecursive());
+		assertEquals(2, tree.getHeightOfTreeDFS());
+		assertEquals(2, tree.getHeightOfTreeBFS());
 		assertEquals(4, tree.getRoot().getLeftChild().getValue());
 		assertEquals(1, tree.getRoot().getRightChild().getValue());
 	
@@ -31,9 +36,13 @@ public class TreeTest {
 		tree.addNode(2);
 		tree.addNode(100);
 		tree.addNode(-90);
-		assertEquals(3, tree.getHeightOfTree());
+		assertEquals(3, tree.getHeightOfTreeRecursive());
+		assertEquals(3, tree.getHeightOfTreeDFS());
+		assertEquals(3, tree.getHeightOfTreeBFS());
 		
 		tree.addNode(89);
-		assertEquals(4, tree.getHeightOfTree());
+		assertEquals(4, tree.getHeightOfTreeRecursive());
+		assertEquals(4, tree.getHeightOfTreeDFS());
+		assertEquals(4, tree.getHeightOfTreeBFS());
 	}
 }
