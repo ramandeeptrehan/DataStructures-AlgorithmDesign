@@ -17,7 +17,7 @@ public class NextGreaterElementTest {
 	}
 	
 	@Test
-	public void testValidCase1() {
+	public void testValidInputList() {
 		List<Integer> arr = Arrays.asList(4, 5, 2, 10);
 		List<Integer> nextGreaterElements = obj.findNextGreaterElement(arr);
 		
